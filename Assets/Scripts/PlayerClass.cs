@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerClass : MonoBehaviour
 {
     public float moveSpeed = 7f;
-    public List<KeyCode> fireKeys = new List<KeyCode> { KeyCode.P };
+    public List<KeyCode> fireKeys = new List<KeyCode> { KeyCode.Space };
 
     private GameObject bulletPrefab;
 

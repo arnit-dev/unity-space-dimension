@@ -27,6 +27,7 @@ public class GameOverClass : MonoBehaviour
 
     public void LoadScene()
     {
+
         if (!string.IsNullOrEmpty(sceneName))
         {
             SceneManager.LoadScene(sceneName);

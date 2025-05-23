@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainLogic : MonoBehaviour
@@ -92,6 +93,7 @@ public class MainLogic : MonoBehaviour
 
     private void ShowGameOverUI()
     {
+        /*
         GameObject goUI = Resources.Load<GameObject>("UI/GameOver");
         if (goUI != null)
         {
@@ -100,6 +102,15 @@ public class MainLogic : MonoBehaviour
         else
         {
             Debug.LogWarning("ไม่พบ GameOver UI ใน Resources/UI/GameOver");
+        }*/
+
+        if (!string.IsNullOrEmpty("GameOver"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            Debug.LogWarning("sceneName ไม่ได้ถูกตั้งค่า");
         }
 
         enabled = false;
